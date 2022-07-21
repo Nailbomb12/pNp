@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title" : "Pin Up Test" })
+  <body>
+    <main class="main">
+      <div class="main__container">
+        <header class="header">
+          <a href="/" class="header__logo">
+            <img src="@img/logo.svg" alt="Pin Up" />
+          </a>
+        </header>
+        <div class="main__content">
+          <div class="main__bonus">
+            <h2 class="main__bonus-title main__bonus-item">
+              БОНУС до <span class="bold-text">30 000 ₴</span>
+            </h2>
+            <h3 class="main__bonus-subtitle main__bonus-item">
+              ФРІБЕТ до
+              <span class="bold-text">3 000 ₴</span>
+            </h3>
+          </div>
+          <div class="main__buttons">
+            @@include('html/button.html', { "title" : "отримати бонус", "class"
+            : "main__button", "id" : "reg" })
+            <a href="#" class="main__buttons-link">бонусні умови</a>
+          </div>
+
+          <ul class="main__list">
+            <li class="main__list-item">
+              Високі <br />
+              коефіцієнти
+            </li>
+            <li class="main__list-item">
+              Максимально <br />
+              розписані лінії
+            </li>
+            <li class="main__list-item">
+              Швидкі <br />
+              виплати
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="main__player" id="player"></div>
+    </main>
+    @@include('html/popup.html', {})
+    <!-- @@include('html/footer.html', {}) -->
+    <script src="js/app.min.js"></script>
+  </body>
+</html>

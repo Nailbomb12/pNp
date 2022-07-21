@@ -1,0 +1,157 @@
+.popup {
+  visibility: hidden;
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5011;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+
+  &--active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &-container {
+    background-color: #fff;
+  }
+
+  &__header {
+    color: #fff;
+    background-color: $accentColor;
+    font-weight: 900;
+    font-family: "Pinup-bold";
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 16px;
+    position: relative;
+
+    &-close {
+      width: 14px;
+      height: 14px;
+      position: absolute;
+      right: 16px;
+      bottom: 12px;
+      display: inline-block;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 15px;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        left: 0;
+        bottom: 45%;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    }
+  }
+
+  &-reg {
+    padding: 24px 40px;
+
+    @media (max-width: 480px) {
+      padding: 20px 30px;
+    }
+    &__form {
+      border-bottom: 1px solid #000000;
+      padding-bottom: 16px;
+      .input-phone__title {
+        text-align: center;
+        font-size: 18px;
+        line-height: 21px;
+        margin-bottom: 22px;
+      }
+
+      .input-field {
+        margin-bottom: 17px;
+        position: relative;
+      }
+
+      .input-phone {
+        display: block;
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.5;
+        border: 1px solid #bdbdbd;
+        border-radius: 4px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+        appearance: none;
+
+        &::placeholder {
+          color: #212529;
+          opacity: 0.4;
+        }
+
+        &:focus {
+          color: #212529;
+          background-color: #fff;
+          border-color: #bdbdbd;
+          outline: 0;
+          box-shadow: 0 0 0 0.2rem rgba(158, 158, 158, 0.25);
+        }
+      }
+
+      .input-label {
+        display: block;
+        margin-bottom: 0.25rem;
+        position: absolute;
+        top: 0;
+        left: 0.3125rem;
+        display: flex;
+        transform: translateY(-50%);
+        pointer-events: none;
+        border: none;
+        background-color: #fff;
+        color: #757575;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        transition: top 0.1s ease-in-out, scale 0.1s ease-in-out;
+      }
+
+      &-button {
+        width: 100%;
+        font-size: 16px;
+        line-height: 22px;
+        padding: 13px 20px;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  &-checklist {
+    padding: 16px 0;
+
+    &__item {
+      &:first-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__link {
+    color: $accentColor;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

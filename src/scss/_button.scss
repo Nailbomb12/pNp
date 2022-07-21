@@ -1,0 +1,25 @@
+.button {
+  color: #fff;
+  white-space: nowrap;
+  text-align: center;
+  text-transform: uppercase;
+  background: $accentColor;
+  border-radius: 9.54248px;
+  padding: 22.902px 61.0719px;
+  min-width: 280px;
+  font-weight: 900;
+  font-size: 26.719px;
+  line-height: 31px;
+  font-family: "Pinup-bold";
+
+  @media screen and (max-width: 768px) {
+    font-size: 20.7407px;
+    line-height: 24px;
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 31px -10px $accentColor;
+  }
+}
